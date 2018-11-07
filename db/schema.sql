@@ -1,8 +1,10 @@
-  use burgers_db;
+CREATE DATABASE burger_db;
 
-  create table burgers_tbl(
-    id int primary key auto_increment,
-    burger_name varchar(30) not null,
-    devoured boolean,
-    burger_time timestamp
-  );
+USE burger_db;
+
+CREATE TABLE burgers(
+  id INT NOT NULL AUTO_INCREMENT,
+  burger_name VARCHAR(100) NOT NULL,
+  devoured BOOLEAN DEFAULT false,
+  PRIMARY KEY (id)
+);
